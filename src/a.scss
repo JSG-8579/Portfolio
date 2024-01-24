@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Inkfree";
+    font-weight: normal;
+    src: url("./font/Inkfree.woff") format("truetype");
+}
+header{
+    position: fixed;
+    margin: 40px 40px;
+    width: 95%;
+    .header_jsg{
+        margin-left: 20px;
+        font-size: 50px;
+        font-family: InkFree;
+        text-decoration: none;
+        color: black;
+    }
+    .header_line{
+        margin: 20px 0;
+        border-bottom: 1px solid black;
+    }
+    .side_link{
+        margin-left: 20px;
+        width: 250px;
+        font-size: 30px;
+        font-family: InkFree;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        a{
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+    }
+}
+
+main{
+    padding-top: 200px;
+    padding-left: 800px;
+}
