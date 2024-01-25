@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import {useLocation} from "react-router-dom";
 
-function Contacts(props) {
+function Home(props) {
     const location = useLocation()
     useEffect(()=>{
         props.getUrl(location.pathname)
     },[])
     return (
         <div>
-            wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+            홈이에요~
+            
         </div>
     );
 }
 
-export default Contacts;
+export default Home;

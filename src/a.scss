@@ -3,22 +3,32 @@
     font-weight: normal;
     src: url("./font/Inkfree.woff") format("truetype");
 }
-header{
+
+@font-face {
+    font-family: "Do Hyeon";
+    src: url("./font/BMDOHYEON_ttf.ttf") format("truetype");
+}
+
+header {
     position: fixed;
     margin: 40px 40px;
     width: 95%;
-    .header_jsg{
+
+    .header_jsg {
         margin-left: 20px;
         font-size: 50px;
         font-family: InkFree;
         text-decoration: none;
         color: black;
     }
-    .header_line{
+
+    .header_line {
         margin: 20px 0;
         border-bottom: 1px solid black;
     }
-    .side_link{
+
+    .side_link {
+        // background-color: gray;
         margin-left: 20px;
         width: 250px;
         font-size: 30px;
@@ -26,16 +36,69 @@ header{
         display: flex;
         flex-direction: column;
         margin-top: 100px;
-        a{
-            margin-bottom: 20px;
+
+        a {
+            text-align: center;
+            width: 100px;
+            margin-bottom: 40px;
             text-decoration: none;
             color: black;
+            transition: 0.2s;
+
+            &.link{
+                background-color:rgba($color: gray, $alpha: 0.3);
+                border-radius: 10px;
+                font-weight: bold;
+            }
+            
+        }
+        a:hover{
+            font-weight: bold;
+
         }
 
     }
 }
 
-main{
-    padding-top: 200px;
-    padding-left: 800px;
+main {
+    // width: 1920px;
+    text-align: center;
+    padding-top: 150px;
+
+    h2 {
+        font-family: InkFree;
+        margin-bottom: 80px;
+        font-size: 40px;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+
+    .about_me {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .imgback {
+            img {
+                width: 80%;
+            }
+        }
+
+        .mytext {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-family: "Do Hyeon";
+                font-size: 30px;
+                line-height: 50px;
+            }
+
+            b {
+                color: red;
+            }
+        }
+    }
 }
