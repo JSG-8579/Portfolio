@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://jsg-8579.github.io/Portfolio/",
+  "homepage": "https://jsg-8579.github.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
