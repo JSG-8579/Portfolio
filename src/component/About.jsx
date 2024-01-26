@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {useLocation} from "react-router-dom";
-import Myimg from "../imgs/image 3.png";
+import Myimg from "../imgs/Home_img2.png";
 
 
 

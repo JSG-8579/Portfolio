@@ -25,7 +25,7 @@ function App() {
       <HashRouter>
         <header>
           <Link to='/' className="header_jsg">JSG Story</Link>
-          <p className="header_line"></p>
+          <p classNam e="header_line"></p>
           <nav className="side_link">
             {
               Links.map((obj, idx) => (
