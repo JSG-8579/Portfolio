@@ -1,104 +1,100 @@
-@font-face {
-    font-family: "Inkfree";
-    font-weight: normal;
-    src: url("./font/Inkfree.woff") format("truetype");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+body {
+    margin: 0;
 }
 
-@font-face {
-    font-family: "Do Hyeon";
-    src: url("./font/BMDOHYEON_ttf.ttf") format("truetype");
-}
-
-header {
+.header_line2 {
     position: fixed;
-    margin: 40px 40px;
-    width: 95%;
+    top: 0;
+    margin: 0;
+    width: 96px;
+    height: 100%;
+    border-right: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
-    .header_jsg {
-        margin-left: 20px;
-        font-size: 50px;
-        font-family: InkFree;
-        text-decoration: none;
-        color: black;
-    }
-
-    .header_line {
-        margin: 20px 0;
-        border-bottom: 1px solid black;
-    }
-
-    .side_link {
-        // background-color: gray;
-        margin-left: 20px;
-        width: 250px;
-        font-size: 30px;
-        font-family: InkFree;
+    nav {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 100px;
+        align-items: center;
+        justify-content: space-between;
 
-        a {
-            text-align: center;
-            width: 100px;
-            margin-bottom: 40px;
-            text-decoration: none;
-            color: black;
-            transition: 0.2s;
-
-            &.link{
-                background-color:rgba($color: gray, $alpha: 0.3);
-                border-radius: 10px;
-                font-weight: bold;
-            }
-            
-        }
-        a:hover{
+        p {
+            font-family: 'Nunito Sans';
+            font-size: 24px;
             font-weight: bold;
-
+            // display: none;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            margin-top: 40px;
         }
+
 
     }
+
 }
 
 main {
-    // width: 1920px;
-    text-align: center;
-    padding-top: 150px;
+    margin-left: 259px;
+    margin-top: 87px;
 
-    h2 {
-        font-family: InkFree;
-        margin-bottom: 80px;
-        font-size: 40px;
-        text-decoration: underline;
-        text-underline-position: under;
-    }
-
-    .about_me {
+    .home_contents {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        .home_text {
+            .logo {
+                margin: 0;
+                font-family: 'Libre Barcode 128 Text';
+                font-size: 30px;
+                font-weight: 400;
+            }
 
-        .imgback {
-            img {
-                width: 80%;
+            p:nth-of-type(2) {
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 800;
+                font-size: 120px;
+                margin: 170px 0 0 0;
+                margin-bottom: 0;
+
+            }
+
+            p:nth-of-type(3) {
+                font-family: 'Nunito Sans', sans-serif;
+                font-size: 40px;
+                margin: 0;
+                font-weight: Light;
+
+            }
+
+            button {
+                margin: 0;
+                font-size: 16px;
+                background: black;
+                color: white;
+                padding: 20px;
+                width: 300px;
+                height: 60px;
+                border: 0;
+                margin-top: 40px;
+            }
+
+            .contact_link {
+                margin-top: 220px;
+                font-size: 16px;
+                display: flex;
+
+                p {
+                    margin: 0;
+                }
             }
         }
-
-        .mytext {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            p {
-                font-family: "Do Hyeon";
-                font-size: 30px;
-                line-height: 50px;
-            }
-
-            b {
-                color: red;
-            }
+        .swiper_div{
+            width:50px;
+            height: 100%;
         }
     }
 }

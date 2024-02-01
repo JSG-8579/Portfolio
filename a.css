@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Nunito+Sans:opsz,wght@6..12,200&display=swap");
+body {
+  margin: 0;
+}
+
+.header_line2 {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 96px;
+  height: 100%;
+  border-right: 1px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_line2 nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_line2 nav p {
+  font-family: "Nunito Sans";
+  font-size: 24px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 40px;
+}
+
+main {
+  margin-left: 259px;
+  margin-top: 87px;
+}
+main .home_contents {
+  display: flex;
+}
+main .home_contents .home_text .logo {
+  margin: 0;
+  font-family: "Libre Barcode 128 Text";
+  font-size: 30px;
+  font-weight: 400;
+}
+main .home_contents .home_text p:nth-of-type(2) {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  font-size: 120px;
+  margin: 170px 0 0 0;
+  margin-bottom: 0;
+}
+main .home_contents .home_text p:nth-of-type(3) {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  font-weight: Light;
+}
+main .home_contents .home_text button {
+  margin: 0;
+  font-size: 16px;
+  background: black;
+  color: white;
+  padding: 20px;
+  width: 300px;
+  height: 60px;
+  border: 0;
+  margin-top: 40px;
+}
+main .home_contents .home_text .contact_link {
+  margin-top: 220px;
+  font-size: 16px;
+  display: flex;
+}
+main .home_contents .home_text .contact_link p {
+  margin: 0;
+}
+main .home_contents .swiper_div {
+  width: 50px;
+  height: 100%;
+}

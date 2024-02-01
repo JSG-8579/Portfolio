@@ -6,6 +6,7 @@ import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Contacts from "./component/Contacts";
 import Home from "./component/Home";
+import Home_img from "./imgs/Home_img0.png";
 
 const Links = ["About", "Skills", "Project", "Contacts"]
 
@@ -17,35 +18,29 @@ function App() {
     console.log(url2)
     setUrl(url2)
   }
- 
-  
 
+
+  // {/* <img src={Home_img}/> */}
   return (
-    <div>
-      <HashRouter>
-        <header>
-          <Link to='/' className="header_jsg">JSG Story</Link>
-          <p classNam e="header_line"></p>
-          <nav className="side_link">
-            {
-              Links.map((obj, idx) => (
-                <Link className={url == '/' + obj ? 'link' : ''} key={obj} to={obj}>{obj}</Link>
-              ))
-            }
-
+    <HashRouter>
+        <div className="header_line2">
+          <nav>
+            <p>ABOUT</p>
+            <p>PROJECT</p>
+            <p>CONTACT</p>
           </nav>
-        </header>
-        <main>
-          <Routes>
-            <Route path="/" element={<Home getUrl={getUrl} />}></Route>
-            <Route path="/About" element={<About getUrl={getUrl} />}></Route>
-            <Route path="/Skills" element={<Skills getUrl={getUrl} />}></Route>
-            <Route path="/Project" element={<Project getUrl={getUrl} />}></Route>
-            <Route path="/contacts" element={<Contacts getUrl={getUrl} />}></Route>
-          </Routes>
-        </main>
-      </HashRouter>
-    </div>
+        </div>
+      <main>
+
+        <Routes>
+          <Route path="/" element={<Home getUrl={getUrl} />}></Route>
+          <Route path="/About" element={<About getUrl={getUrl} />}></Route>
+          <Route path="/Project" element={<Project getUrl={getUrl} />}></Route>
+          <Route path="/contacts" element={<Contacts getUrl={getUrl} />}></Route>
+        </Routes>
+      </main>
+
+    </HashRouter>
   );
 }
 
