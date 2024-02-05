@@ -24,14 +24,16 @@ body {
         align-items: center;
         justify-content: space-between;
 
-        p {
+        a {
             font-family: 'Nunito Sans';
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
             // display: none;
             writing-mode: vertical-rl;
             transform: rotate(180deg);
             margin-top: 40px;
+            text-decoration: none;
+            color: black;
         }
 
 
@@ -41,16 +43,20 @@ body {
 
 main {
     margin-left: 259px;
-    margin-top: 87px;
+
 
     .home_contents {
+        height: 100%;
         display: flex;
+        justify-content: space-between;
+
         .home_text {
             .logo {
                 margin: 0;
                 font-family: 'Libre Barcode 128 Text';
                 font-size: 30px;
                 font-weight: 400;
+                margin-top: 87px;
             }
 
             p:nth-of-type(2) {
@@ -84,6 +90,7 @@ main {
 
             .contact_link {
                 margin-top: 220px;
+                margin-bottom: 102px;
                 font-size: 16px;
                 display: flex;
 
@@ -92,9 +99,95 @@ main {
                 }
             }
         }
-        .swiper_div{
-            width:50px;
-            height: 100%;
+
+        .home_picture {
+            display: flex;
+            margin-right: 96px;
+
+            .drag_point {
+                width: 23px;
+                height: 64px;
+                margin: auto 33px;
+            }
+
+            .swiper_div {
+                .swiper {
+                    width: 414px;
+                    height: 100vh;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .about_contents {
+        .gohome {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 96px;
+            height: 64px;
+            top: 0;
+            left: 0;
+
+            p {
+                margin: 0;
+                text-align: center;
+                font-family: 'Libre Barcode 128 Text';
+                font-size: 40px;
+
+            }
+        }
+
+        .about_skill{
+            font-family: 'Nunito Sans';
+            font-weight: bold;
+            margin-top:90px;
+            
+            .about_me{
+                p:nth-of-type(1){
+                    font-size: 70px;
+                    margin: 0;
+                    
+                }
+                p:nth-of-type(2){
+                    font-size: 30px;
+                    margin: 0;
+                    margin-top:80px;
+                    
+                    b{
+                        font-size: 20px;
+                    } 
+                }
+                #my_face{
+                    margin-top: 30px;
+                }
+                p:nth-of-type(3){
+                    margin-top:50px;
+                    font-size: 20px;
+                    #red_text{
+                        color: red;
+                    }
+                }
+                .resume_down{
+                    background-color: black;
+                    color: white;
+                    width: 193px;
+                    height: 56px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border: 0;
+                }
+
+            }
         }
     }
 }

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import './a.scss'
 import About from "./component/About";
-import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Contacts from "./component/Contacts";
 import Home from "./component/Home";
@@ -25,9 +24,9 @@ function App() {
     <HashRouter>
         <div className="header_line2">
           <nav>
-            <p>ABOUT</p>
-            <p>PROJECT</p>
-            <p>CONTACT</p>
+            <Link to ='/About'><p>ABOUT</p></Link>
+            <Link to ='/Project'><p>PROJECT</p></Link>
+            <Link to ='/Contacts'><p>CONTACT</p></Link>
           </nav>
         </div>
       <main>
@@ -36,7 +35,7 @@ function App() {
           <Route path="/" element={<Home getUrl={getUrl} />}></Route>
           <Route path="/About" element={<About getUrl={getUrl} />}></Route>
           <Route path="/Project" element={<Project getUrl={getUrl} />}></Route>
-          <Route path="/contacts" element={<Contacts getUrl={getUrl} />}></Route>
+          <Route path="/Contacts" element={<Contacts getUrl={getUrl} />}></Route>
         </Routes>
       </main>
 
