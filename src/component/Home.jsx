@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import home_img2 from '../imgs/Home_img4.png';
-import home_img4 from '../imgs/Home_img1.png';
-import home_img5 from '../imgs/Home_img2.png';
-import home_img6 from '../imgs/Home_img3.png';
-import home_img7 from '../imgs/Home_img5.png';
 import 'swiper/css';
 import 'swiper/css/virtual';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Mousewheel } from 'swiper/modules';
 
 
 function Home(props) {
+    const imgs = ["img1", "img2", "img3","img1", "img2", "img3"]
     const location = useLocation()
     useEffect(() => {
         props.getUrl(location.pathname)
@@ -22,14 +18,14 @@ function Home(props) {
                 <p className='logo'>JSG Story</p>
                 <p>JSG STORY</p>
                 <p>FrontEnd developer is My Dream</p>
-                <button>ABOUT & SKILL</button>
+                <Link to='/PROJECT'><button>ABOUT & SKILL</button></Link>
                 <div className='contact_link'>
-                    <Link to><p>CONTACT US</p></Link>
-                    <img src={home_img2} alt="" width='40' height='27' />
+                    <Link to ='/CONTACT'><p>CONTACT US</p></Link>
+                    <img src='./imgs/Home_img4.png' alt="" width='40' height='27' />
                 </div>
             </div>
             <div className='home_picture'>
-                <img className='drag_point' src={home_img7} alt="" />
+                <img className='drag_point' src='./imgs/Home_img5.png' alt="" />
                 <div className='swiper_div'>
                     <div className='swiper'>
                         <Swiper
@@ -43,15 +39,16 @@ function Home(props) {
                             pagination={{
                                 clickable: true,
                             }}
-                            modules={[Pagination]}
+                            modules={[Pagination, Mousewheel]}
                             navigation
-                            scrollbar={{ draggable: true }}>
-                            <SwiperSlide><img src={home_img4} /></SwiperSlide>
-                            <SwiperSlide><img src={home_img5} /></SwiperSlide>
-                            <SwiperSlide><img src={home_img6} /></SwiperSlide>
-                            <SwiperSlide><img src={home_img4} /></SwiperSlide>
-                            <SwiperSlide><img src={home_img5} /></SwiperSlide>
-                            <SwiperSlide><img src={home_img6} /></SwiperSlide>
+                            scrollbar={{ draggable: true }}
+                            mousewheel = {{ invert: true }}>
+                                {
+                                    imgs.map((obj)=>(
+                                        <SwiperSlide ><Link key={obj} to='/PROJECT'><img src={`./imgs/Home_${obj}.png`} /></Link></SwiperSlide>
+                                    ))
+                                }
+                            
 
                         </Swiper>
                     </div>

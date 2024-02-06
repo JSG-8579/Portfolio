@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Nunito+Sans:opsz,wght@6..12,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 body {
   margin: 0;
 }
@@ -26,12 +27,16 @@ body {
 .header_line2 nav a {
   font-family: "Nunito Sans";
   font-size: 20px;
-  font-weight: bold;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin-top: 40px;
   text-decoration: none;
   color: black;
+}
+.header_line2 nav a.link {
+  text-decoration: underline;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 main {
@@ -65,13 +70,20 @@ main .home_contents .home_text p:nth-of-type(3) {
 main .home_contents .home_text button {
   margin: 0;
   font-size: 16px;
-  background: black;
+  background-color: black;
   color: white;
   padding: 20px;
   width: 300px;
   height: 60px;
   border: 0;
   margin-top: 40px;
+}
+main .home_contents .home_text button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
 }
 main .home_contents .home_text .contact_link {
   margin-top: 220px;
@@ -81,6 +93,7 @@ main .home_contents .home_text .contact_link {
 }
 main .home_contents .home_text .contact_link p {
   margin: 0;
+  margin-right: 5px;
 }
 main .home_contents .home_picture {
   display: flex;
@@ -102,7 +115,7 @@ main .home_contents .home_picture .swiper_div .swiper img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .about_contents .gohome {
+main #gohome {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -112,40 +125,43 @@ main .about_contents .gohome {
   top: 0;
   left: 0;
 }
-main .about_contents .gohome p {
+main #gohome a {
   margin: 0;
   text-align: center;
   font-family: "Libre Barcode 128 Text";
   font-size: 40px;
+  color: black;
 }
-main .about_contents .about_skill {
+main .about_skill {
   font-family: "Nunito Sans";
   font-weight: bold;
-  margin-top: 90px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
 }
-main .about_contents .about_skill .about_me p:nth-of-type(1) {
+main .about_skill .me p:nth-of-type(1) {
   font-size: 70px;
   margin: 0;
 }
-main .about_contents .about_skill .about_me p:nth-of-type(2) {
+main .about_skill .me p:nth-of-type(2) {
   font-size: 30px;
   margin: 0;
-  margin-top: 80px;
+  margin-top: 60px;
 }
-main .about_contents .about_skill .about_me p:nth-of-type(2) b {
+main .about_skill .me p:nth-of-type(2) b {
   font-size: 20px;
 }
-main .about_contents .about_skill .about_me #my_face {
+main .about_skill .me #my_face {
   margin-top: 30px;
 }
-main .about_contents .about_skill .about_me p:nth-of-type(3) {
+main .about_skill .me p:nth-of-type(3) {
   margin-top: 50px;
   font-size: 20px;
 }
-main .about_contents .about_skill .about_me p:nth-of-type(3) #red_text {
+main .about_skill .me p:nth-of-type(3) #red_text {
   color: red;
 }
-main .about_contents .about_skill .about_me .resume_down {
+main .about_skill .me .resume_down {
   background-color: black;
   color: white;
   width: 193px;
@@ -153,4 +169,228 @@ main .about_contents .about_skill .about_me .resume_down {
   font-size: 16px;
   font-weight: bold;
   border: 0;
+}
+main .about_skill #line2 {
+  border-right: 1px solid black;
+}
+main .about_skill .my_skill {
+  margin-right: 150px;
+}
+main .about_skill .my_skill p:nth-of-type(1) {
+  font-size: 70px;
+  margin: 0;
+}
+main .about_skill .my_skill p:nth-of-type(2) {
+  font-size: 30px;
+  margin-top: 60px;
+}
+main .about_skill .my_skill p:nth-of-type(3) {
+  font-size: 30px;
+}
+main .about_skill .my_skill p:nth-of-type(4) {
+  font-size: 30px;
+}
+main .about_skill .my_skill .skill_list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+main .about_skill .my_skill .familar_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+main .about_skill .my_skill .familar_list div {
+  position: relative;
+}
+main .about_skill .my_skill .familar_list .family {
+  width: 130px;
+  height: 44px;
+  border-radius: 30px;
+  background-color: white;
+  border: 3px solid black;
+  font-family: "Noto Sans KR";
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+main .about_skill .my_skill .familar_list .family:hover {
+  background-color: black;
+  border: 3px solid black;
+  color: white;
+  cursor: pointer;
+}
+main .about_skill .my_skill .familar_list .skill_textbox {
+  display: none;
+  pointer-events: none;
+}
+main .about_skill .my_skill .familar_list .skill_textbox #skill_text {
+  font-size: 15px;
+  padding-top: 20%;
+  width: 80%;
+  font-size: 20px;
+}
+main .about_skill .my_skill .familar_list .skill_textbox.active {
+  width: 330px;
+  height: 330px;
+  background-image: url("../public/imgs/Skills_img.png");
+  background-repeat: no-repeat;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+}
+main .about_skill .my_skill .normar_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+main .about_skill .my_skill .normar_list div {
+  position: relative;
+}
+main .about_skill .my_skill .normar_list .normar {
+  width: 130px;
+  height: 44px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+  font-weight: bold;
+  border: 0;
+}
+main .about_skill .my_skill .normar_list .normar:hover {
+  background-color: white;
+  border: 3px solid black;
+  color: black;
+  cursor: pointer;
+}
+main .about_skill .my_skill .normar_list .skill_textbox2 {
+  display: none;
+  pointer-events: none;
+}
+main .about_skill .my_skill .normar_list .skill_textbox2 #skill_text2 {
+  font-size: 15px;
+  padding-top: 20%;
+  width: 80%;
+  font-size: 20px;
+}
+main .about_skill .my_skill .normar_list .skill_textbox2.active {
+  width: 330px;
+  height: 330px;
+  background-image: url("../public/imgs/Skills_img.png");
+  background-repeat: no-repeat;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+}
+main .Project {
+  margin-top: 70px;
+}
+main .Project #project_text {
+  margin: 0;
+  font-size: 70px;
+  margin-bottom: 100px;
+}
+main .Project .project_section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+main .Project .project_section nav p:nth-of-type(1) {
+  font-size: 50px;
+  margin: 0;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+}
+main .Project .project_section nav p:nth-of-type(2) {
+  font-size: 20px;
+  line-height: 40px;
+  font-family: "Nunito Sans";
+  font-weight: 300;
+}
+main .Project .project_section .project_img {
+  margin-right: 160px;
+}
+main .Project .project_section .project_img img {
+  width: 639px;
+}
+main .Contact {
+  margin-top: 70px;
+}
+main .Contact #contact_text {
+  margin: 0;
+  font-size: 70px;
+}
+main .Contact .contacts {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+main .Contact .contacts .comment input {
+  border: 0;
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+}
+main .Contact .contacts .comment .name_input {
+  width: 580px;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+  line-height: 30px;
+  padding: 10px;
+}
+main .Contact .contacts .comment .email_input {
+  width: 580px;
+  border-bottom: 1px solid black;
+  margin-bottom: 60px;
+  line-height: 30px;
+  padding: 10px;
+}
+main .Contact .contacts .comment .textarea_input {
+  width: 580px;
+  height: 210px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  vertical-align: top;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  resize: none;
+}
+main .Contact .contacts .comment .submit_input {
+  border: 0;
+  color: white;
+  background-color: black;
+  width: 154px;
+  height: 44px;
+  resize: none;
+}
+main .Contact .contacts .my_link {
+  width: 700px;
+  height: 500px;
+  background-image: url("../public/imgs/Contact1.png");
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-right: 150px;
+}
+main .Contact .contacts .my_link nav {
+  margin-top: 150px;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  margin-bottom: 170px;
+}
+main .Contact .contacts .my_link .contact_img {
+  margin-left: 500px;
+  width: 173px;
+  height: 115px;
 }
