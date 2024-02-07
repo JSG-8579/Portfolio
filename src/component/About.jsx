@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import Familar from './Familar';
 import Normar from './Normar';
 import Download from './Download';
+import { motion } from 'framer-motion';
+
 
 
 
@@ -88,7 +90,9 @@ function About(props) {
                 <div className='my_skill'>
                     <p>SKILL</p>
                     <p>That I Own</p>
-                    <div className='skill_list'>
+                    <div
+                    
+                     className='skill_list'>
                         {
                             SkillName.map((obj) => (
                                 <img key={obj} src={`./imgs/${obj}.png`} />

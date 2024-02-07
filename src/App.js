@@ -15,32 +15,35 @@ function App() {
   const getUrl = (url2) => {
     console.log(url2)
     setUrl(url2)
-  } 
+  }
+
+  
 
 
   return (
     <HashRouter>
-      <div className="header_line2">
-        <nav>
-          {
-            Links.map((obj)=>(
-              <Link key={obj} className={url == '/' + obj ? 'link':''} to={`/${obj}`}><p>{obj}</p></Link>
 
-            ))
-          }
-        </nav>
-      </div>
-      <main>
+        <div className="header_line2">
+          <nav>
+            {
+              Links.map((obj) => (
+                <Link key={obj} className={url == '/' + obj ? 'link' : ''} to={`/${obj}`}><p>{obj}</p></Link>
 
-        <Routes>
-          <Route path="/" element={<Home getUrl={getUrl} />}></Route>
-          <Route path="/ABOUT" element={<About getUrl={getUrl} />}></Route>
-          <Route path="/PROJECT" element={<Project getUrl={getUrl} />}></Route>
-          <Route path="/CONTACT" element={<Contacts getUrl={getUrl} />}></Route>
-        </Routes>
-      </main>
+              ))
+            }
+          </nav>
+        </div>
+        <main>
 
+          <Routes>
+            <Route path="/" element={<Home getUrl={getUrl} />}></Route>
+            <Route path="/ABOUT" element={<About getUrl={getUrl} />}></Route>
+            <Route path="/PROJECT" element={<Project getUrl={getUrl} />}></Route>
+            <Route path="/CONTACT" element={<Contacts getUrl={getUrl} />}></Route>
+          </Routes>
+        </main>
     </HashRouter>
+
   );
 }
 

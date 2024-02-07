@@ -63,6 +63,7 @@ main {
         height: 100%;
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
 
         .home_text {
             .logo {
@@ -203,7 +204,7 @@ main {
                 font-size: 20px;
 
                 #red_text {
-                    color: red;
+                    color: rgb(255, 0, 0);
                 }
             }
 
@@ -215,6 +216,11 @@ main {
                 font-size: 16px;
                 font-weight: bold;
                 border: 0;
+            }
+
+            .resume_down:hover {
+                cursor: pointer;
+
             }
 
         }
@@ -254,7 +260,8 @@ main {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 40px;
-                div{
+
+                div {
                     position: relative;
                 }
 
@@ -280,12 +287,12 @@ main {
                 .skill_textbox {
                     display: none;
                     pointer-events: none;
-                    
+
 
                     #skill_text {
                         font-size: 15px;
                         padding-top: 20%;
-                        width:80%;
+                        width: 80%;
                         font-size: 20px;
                     }
 
@@ -300,7 +307,7 @@ main {
                         right: 0;
                         text-align: center;
                         justify-content: center;
-                        
+
                     }
                 }
 
@@ -310,7 +317,8 @@ main {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 40px;
-                div{
+
+                div {
                     position: relative;
                 }
 
@@ -332,15 +340,16 @@ main {
                     color: black;
                     cursor: pointer;
                 }
+
                 .skill_textbox2 {
                     display: none;
                     pointer-events: none;
-                    
+
 
                     #skill_text2 {
                         font-size: 15px;
                         padding-top: 20%;
-                        width:80%;
+                        width: 80%;
                         font-size: 20px;
                     }
 
@@ -355,7 +364,7 @@ main {
                         right: 0;
                         text-align: center;
                         justify-content: center;
-                        
+
                     }
                 }
             }
@@ -370,6 +379,7 @@ main {
             margin: 0;
             font-size: 70px;
             margin-bottom: 100px;
+
         }
 
         .project_section {
@@ -379,7 +389,7 @@ main {
 
             nav {
                 p:nth-of-type(1) {
-                    font-size: 50px;
+                    font-size: 45px;
                     margin: 0;
                     font-family: 'Nunito Sans';
                     font-weight: bold;
@@ -389,12 +399,16 @@ main {
                     font-size: 20px;
                     line-height: 40px;
                     font-family: 'Nunito Sans';
-                    font-weight: 300;
+                    font-weight: 500;
+                    white-space: pre-wrap;
+
                 }
             }
 
             .project_img {
                 margin-right: 160px;
+
+
 
                 img {
                     width: 639px;
@@ -404,95 +418,84 @@ main {
         }
     }
 
-    .Contact {
-        margin-top: 70px;
+    .Contact_all {
+        height: 950px;
+        display: flex;
+        justify-content: space-between;
 
-        #contact_text {
-            margin: 0;
-            font-size: 70px;
+        .Contact {
+            width: 45%;
+            margin-top: 70px;
+            font-family: 'Noto Sans KR';
+            font-weight: 600;
+
+
+            #contact_text {
+                margin: 0;
+                font-size: 70px;
+                
+            }
+
+            .contacts {
+                margin-top: 60px;
+                display: flex;
+                justify-content: space-between;
+
+                .dlstkakf {
+                    font-size: 30px;
+                    line-height: 40px;
+                    font-weight: 400;
+                    
+
+                    p {
+                        margin: 0;
+                        white-space: pre-wrap;
+                    }
+                }
+
+                .my_link {
+                    text-align: left;
+
+                    nav {
+                        line-height: 50px;
+                        font-size: 20px;
+                        font-family: 'Noto Sans KR';
+                        font-weight: bold;
+
+                        p {
+                            margin: 0;
+                        }
+
+                        p:nth-of-type(2n-1) {
+                            color: rgb(181, 180, 180);
+                            font-size: 20px;
+                        }
+
+                        p:nth-of-type(2n) {
+                            font-family: 'Noto Sans KR';
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+
+                        a {
+                            color: black;
+                            text-decoration: none;
+                        }
+
+                    }
+
+                }
+
+
+            }
         }
 
-        .contacts {
-            margin-top: 60px;
-            display: flex;
-            justify-content: space-between;
-
-            .comment {
-                input {
-                    border: 0;
-                    font-size: 16px;
-                    font-family: 'Nunito Sans';
-                    font-weight: bold;
-                }
-
-                .name_input {
-                    width: 580px;
-                    border-bottom: 1px solid black;
-                    margin-bottom: 30px;
-                    line-height: 30px;
-                    padding: 10px;
-
-                }
-
-                .email_input {
-                    width: 580px;
-                    border-bottom: 1px solid black;
-                    margin-bottom: 60px;
-                    line-height: 30px;
-                    padding: 10px;
-
-                }
-
-                .textarea_input {
-                    width: 580px;
-                    height: 210px;
-                    border: 1px solid black;
-                    margin-bottom: 20px;
-                    vertical-align: top;
-                    text-align: left;
-                    padding: 10px;
-                    font-size: 16px;
-                    font-family: 'Nunito Sans';
-                    font-weight: bold;
-                    resize: none;
-
-                }
-
-                .submit_input {
-                    border: 0;
-                    color: white;
-                    background-color: black;
-                    width: 154px;
-                    height: 44px;
-                    resize: none;
-
-                }
-
+        .contact_img {
+            img {
+                margin-right: 180px;
+                margin-top: 115px;
             }
 
-            .my_link {
-                width: 700px;
-                height: 500px;
-                background-image: url('../public/imgs/Contact1.png');
-                background-repeat: no-repeat;
-                text-align: center;
-                margin-right: 150px;
-
-                nav {
-                    margin-top: 150px;
-                    line-height: 50px;
-                    font-size: 20px;
-                    font-family: 'Nunito Sans';
-                    font-weight: bold;
-                    margin-bottom: 170px;
-                }
-
-                .contact_img {
-                    margin-left: 500px;
-                    width: 173px;
-                    height: 115px;
-                }
-            }
         }
     }
 

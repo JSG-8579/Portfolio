@@ -1,7 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 function Contacts(props) {
+
+    const completedTitle = "'For any enquiries, or just to \nsay hello, get in touch and \ncontact'";
+    const [landingTitle, setLandingTitle] = useState("");
+    const [count, setCount] = useState(0);
+
+    useEffect(()=>{
+    const interval = setInterval(() => {
+        setLandingTitle(landingTitle + completedTitle[count]);
+        setCount(count+1)
+    }, 100)
+    if(count === completedTitle.length){
+        clearInterval(interval)
+    }
+    return ()=> clearInterval(interval)
+})
+
+        
+
     const location = useLocation()
     useEffect(() => {
         props.getUrl(location.pathname)
@@ -11,27 +29,37 @@ function Contacts(props) {
             <div id='gohome'>
                 <Link to='/'>JSG</Link>
             </div>
-            <div className='Contact'>
-                <p id='contact_text'>CONTACT</p>
+            <div className='Contact_all'>
+                <div className='Contact'>
+                    <p id='contact_text'>CONTACT</p>
+                    <div className='contacts'>
+                        <div className='dlstkakf'>
+                            <p>
+                                {landingTitle}
+                            </p>
+                        </div>
 
-                <div className='contacts'>
-                    <form className='comment'>
-                        <input className='name_input' type="name" placeholder='이름' /><br />
-                        <input className='email_input' type="email" placeholder='이메일' /><br />
-                        <textarea className='textarea_input'  placeholder='내용' ></textarea><br />
-                        <input className='submit_input' type="submit" value='Submit' />
-                    </form>
-                    <div className='my_link'>
-                        <nav>
-                            <p>Github : <a>https://github.com/JSG-8579</a></p>
-                            <p>Kakao : <a>https://open.kakao.com/o/sp53ZU5f</a></p>
-                            <p>Email : rkfntmdrhks@naver.com</p>
-                        </nav>
-                        <img className='contact_img' src="./imgs/Home_img4.png" alt="" />
+                        <div className='my_link'>
+                            <nav>
+                                <p>Email</p>
+                                <p>jsg8579@naver.com</p>
+                                <p>Github</p>
+                                <p><a a href='https://github.com/JSG-8579' target="_blank" >https://github.com/JSG-8579</a></p>
+                                <p>Kakao</p>
+                                <p><a href='https://open.kakao.com/o/sp53ZU5f' target="_blank">https://open.kakao.com/o/sp53ZU5f</a></p>
+                                <p>Address</p>
+                                <p>서울특별시 중랑구 중화동</p>
+                            </nav>
+                        </div>
+
+
                     </div>
                 </div>
-
+                <div className='contact_img'>
+                    <img src="./imgs/Contact_img1.png" alt="" />
+                </div>
             </div>
+
         </div>
     );
 }

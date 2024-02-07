@@ -2,7 +2,7 @@ import React from 'react';
 
 function Download(props) {
 
-    function bb(){
+    function downResume(){
         
         const link = document.createElement('a');
         link.href = './resume/resume.pdf';
@@ -14,7 +14,7 @@ function Download(props) {
     
     return (
         <>
-            <button  className='resume_down' onClick={bb}>이력서</button>
+            <button  className='resume_down' onClick={downResume}>이력서</button>
         </>
     );
 }

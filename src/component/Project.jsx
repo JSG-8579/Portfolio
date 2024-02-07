@@ -1,7 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 function Project(props) {
+    const Project_all =
+        [
+            {
+                'project_name': 'Happy Pub',
+                'text': '첫번째 프로젝트인 주류 판매 사이트입니다.\n기존 술마켓 각각의 온라인 판매 사이트를 참고하여\n디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다',
+                'img': './imgs/Project1.png',
+                'link': 'https://jsg-8579.github.io/Team-project-Pub/'
+            },
+            {
+                'project_name': 'Happy Pub',
+                'text': '첫번째 프로젝트인 주류 판매 사이트입니다.\n기존 술마켓 각각의 온라인 판매 사이트를 참고하여\n디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다',
+                'img': './imgs/Project1.png',
+                'link': 'https://jsg-8579.github.io/Team-project-Pub/'
+            },
+            {
+                'project_name': 'Happy Pub',
+                'text': '첫번째 프로젝트인 주류 판매 사이트입니다.\n기존 술마켓 각각의 온라인 판매 사이트를 참고하여\n디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다',
+                'img': './imgs/Project1.png',
+                'link': 'https://jsg-8579.github.io/Team-project-Pub/'
+            },
+        ]
+
+    const projectLink = (aa) => {
+        // console.log(aa)
+        const link2 = document.createElement('a');
+        link2.href = `${aa}`;
+        link2.target = "_blank";
+        link2.click();
+    }
+
     const location = useLocation()
     useEffect(() => {
         props.getUrl(location.pathname)
@@ -11,40 +42,50 @@ function Project(props) {
             <div id='gohome'>
                 <Link to='/'>JSG</Link>
             </div>
-            <div className='Project'>
+            <motion.div 
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{
+                ease: "easeInOut",
+                duration: 1,
+                y: { duration: 1 },
+            }}className='Project'>
                 <p id='project_text'>PROJECT</p>
-                <section className='project_section'>
-                    <nav>
-                        <p>Happy Pub</p>
-                        <p>
-                            첫번째 프로젝트인 주류 판매 사이트입니다.<br />
-                            기존 술마켓 각각의 온라인 판매 사이트를 참고하여<br />
-                            디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다
-                        </p>
-                    </nav>
-                    <div className='project_img'>
-                        <img src="./imgs/Project1.png" alt="" />
-                        
-                    </div>
+                {
+                    Project_all.map((obj) => (
+                        <section className='project_section'>
+                            <motion.nav
+                            initial={{ opacity: 0, x: -100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{
+                                ease: "easeInOut",
+                                duration: 1,
+                                y: { duration: 1 },
+                            }}>
+                                <p>{obj.project_name}</p>
+                                <p>{obj.text}</p>
+                            </motion.nav>
+                            <motion.div
+                            initial={{ opacity: 0, x: 100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false }}
+                            transition={{
+                                ease: "easeInOut",
+                                duration: 1,
+                                y: { duration: 1 },
+                            }} className='project_img'>
+                                <img onClick={() => { projectLink(obj.link) }} src={obj.img} alt="" />
 
-                </section>
-                <section className='project_section'>
-                    <nav>
-                        <p>Happy Pub</p>
-                        <p>
-                            첫번째 프로젝트인 주류 판매 사이트입니다.<br />
-                            기존 술마켓 각각의 온라인 판매 사이트를 참고하여<br />
-                            디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다
-                        </p>
-                    </nav>
-                    <div className='project_img'>
-                        <img src="./imgs/Project1.png" alt="" />
-                        
-                    </div>
+                            </motion.div>
 
-                </section>
+                        </section>
 
-            </div>
+                    ))
+                }
+
+            </motion.div>
 
 
 
