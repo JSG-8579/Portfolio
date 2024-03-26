@@ -43,14 +43,6 @@ body {
 
         }
 
-        // .link:hover{
-        //     background-color: black;
-        //     border-radius: 10px;
-        //     color: white;
-        //     font-size: 25px;
-
-        // }
-
 
     }
 
@@ -113,34 +105,26 @@ main {
                 font-weight: bold;
             }
 
-            .swiper_div2 {
-                display: none;
-                .swiper2 {
-                    width: 25vw;
-                    height: 100vh;
-                    overflow: hidden;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-
             .contact_link {
                 margin-top: 220px;
                 margin-bottom: 102px;
-                font-size: 16px;
+                font-size: 20px;
                 display: flex;
 
-                p {
-                    margin: 0;
-                    margin-right: 5px;
+
+                a {
+                    text-decoration-line: none;
+
+                    p {
+                        margin: 0;
+                        margin-right: 5px;
+
+                    }
                 }
             }
         }
-        .burger{
+
+        .burger {
             position: absolute;
             right: 50px;
             top: 100px;
@@ -169,10 +153,10 @@ main {
                     }
                 }
             }
-            
+
         }
 
-        
+
 
     }
 
@@ -272,10 +256,12 @@ main {
             }
 
             p:nth-of-type(3) {
+                margin-top: 60px;
                 font-size: 30px;
             }
 
             p:nth-of-type(4) {
+                margin-top: 60px;
                 font-size: 30px;
             }
 
@@ -344,6 +330,7 @@ main {
 
             .normar_list {
                 display: flex;
+                margin-bottom: 30px;
                 flex-wrap: wrap;
                 gap: 40px;
 
@@ -417,6 +404,7 @@ main {
             margin-bottom: 80px;
 
             nav {
+                width: 40%;
                 p:nth-of-type(1) {
                     font-size: 45px;
                     margin: 0;
@@ -432,6 +420,13 @@ main {
                     white-space: pre-wrap;
 
                 }
+                p:nth-of-type(3) {
+                    text-align: right;
+                    padding-top: 50px;
+                    img{
+                        width: 70px;
+                    }
+                }
             }
 
             .project_img {
@@ -440,7 +435,7 @@ main {
 
 
                 img {
-                    width: 639px;
+                    width: 550px;
                 }
 
             }
@@ -448,16 +443,13 @@ main {
     }
 
     .Contact_all {
-        height: 950px;
-        display: flex;
-        justify-content: space-between;
+        height: 100%;
 
         .Contact {
-            width: 45%;
+
+            width: 80%;
             margin-top: 70px;
             font-family: 'Noto Sans KR';
-
-
 
             #contact_text {
                 margin: 0;
@@ -465,15 +457,17 @@ main {
 
             }
 
-            .contacts {
+            .contacts {    
                 margin-top: 60px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
 
                 .dlstkakf {
-                    font-size: 30px;
+                    width: 32%;
+                    font-size: 1.5vw;
                     line-height: 40px;
                     font-weight: 400;
+                    margin-right: 50px;
 
 
                     p {
@@ -483,11 +477,12 @@ main {
                 }
 
                 .my_link {
+                    width: 32%;
                     text-align: left;
+                    margin-right: 50px;
 
                     nav {
                         line-height: 50px;
-                        font-size: 20px;
                         font-family: 'Noto Sans KR';
                         font-weight: bold;
 
@@ -515,23 +510,24 @@ main {
 
                 }
 
+                .contact_img {
+                    width: 32%;
+                    img {
+                        width: 500px;
+                       
+                    }
+        
+                }
 
             }
         }
 
-        .contact_img {
-            img {
-                margin-right: 180px;
-                margin-top: 115px;
-            }
-
-        }
     }
 
 
 }
 
-@include asd {
+@include first {
 
     main {
         margin-left: 100px;
@@ -539,109 +535,99 @@ main {
         .home_contents {
             display: block;
             height: 100%;
-    
+
             .home_text {
-                width: 80%;
+                width: 70%;
                 margin: 0 auto;
+
                 .logo {
-                    margin: 0;
-                    font-family: 'Libre Barcode 128 Text';
-                    font-size: 30px;
-                    font-weight: 400;
-                    margin-top: 87px;
-                }
-    
-                p:nth-of-type(2) {
-                    font-family: 'Nunito Sans', sans-serif;
-                    font-weight: 800;
-                    font-size: 120px;
-                    margin: 100px 0 0 0;
-                    margin-bottom: 0;
-    
-                }
-    
-                p:nth-of-type(3) {
-                    font-family: 'Nunito Sans', sans-serif;
-                    font-size: 40px;
-                    margin: 0;
-                    font-weight: Light;
-    
-                }
-    
-                button {
-                    margin: 0;
-                    font-size: 16px;
-                    background-color: black;
-                    color: white;
-                    padding: 20px;
-                    width: 300px;
-                    height: 60px;
-                    border: 0;
-                    margin-top: 40px;
-                }
-    
-                button:hover {
-                    background-color: white;
-                    color: black;
-                    border: 1px solid black;
-                    cursor: pointer;
-                    font-weight: bold;
+                    display: none;
                 }
 
-                .swiper_div2 {
-                    padding-top: 150px;
-                    display: block;
-                    .swiper2 {
-                        width: 100vh;
-                        height: 100%;
-                        // overflow: hidden;
-    
-                        img {
-                            width: 250px;
-                            height: 350px;
-                            object-fit: cover;
-                        }
-                    }
+                p:nth-of-type(2) {
+                    margin-top: 150px;
+
                 }
-    
+
+                p:nth-of-type(3) {
+                    margin-top: 30px;
+
+                }
+
+                button {
+                    margin-top: 70px;
+                }
+
                 .contact_link {
-                    margin-top: 50px;
-                    margin-bottom: 102px;
-                    font-size: 16px;
-                    display: flex;
-    
-                    p {
-                        margin: 0;
-                        margin-right: 5px;
-                    }
+                    margin-top: 150px;
                 }
             }
-    
+
             .home_picture {
                 .drag_point {
                     display: none;
 
                 }
-    
+
                 .swiper_div {
                     display: none;
                 }
-            
+
             }
-    
+
         }
+
         .about_skill {
             display: block;
 
             .me {
                 width: 100%;
                 text-align: center;
-                
 
+
+                p:nth-of-type(1) {
+                    font-size: 70px;
+                    margin: 0;
+    
+                }
+    
+                p:nth-of-type(2) {
+                    font-size: 30px;
+                    margin: 0;
+                    margin-top: 60px;
+    
+                    b {
+                        font-size: 20px;
+                    }
+                }
+    
                 #my_face {
                     margin-top: 30px;
-                    width: 80%;
-                    
+                    width: 60%;
+                }
+    
+                p:nth-of-type(3) {
+                    margin-top: 50px;
+                    font-size: 20px;
+    
+                    #red_text {
+                        color: rgb(255, 0, 0);
+                    }
+                }
+    
+                .resume_down {
+                    background-color: black;
+                    color: white;
+                    width: 193px;
+                    height: 56px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border: 0;
+                }
+    
+                .resume_down:hover {
+                    cursor: pointer;
+    
                 }
             }
 
@@ -649,18 +635,20 @@ main {
                 width: 100%;
                 padding-top: 100px;
                 text-align: center;
-                .skill_list{
+
+                .skill_list {
                     width: 80%;
                     justify-content: center;
                     margin: 0 auto;
                 }
 
-                .familar_list{
+                .familar_list {
                     width: 80%;
                     justify-content: center;
                     margin: 0 auto;
                 }
-                .normar_list{
+
+                .normar_list {
                     width: 80%;
                     justify-content: center;
                     margin: 0 auto;
@@ -670,63 +658,66 @@ main {
             }
 
         }
+
         .Project {
-            margin-top: 70px;
-    
+            width: 80%;
+            margin: 0 auto;
+
             #project_text {
-                margin: 0;
+                margin-top: 60px;
                 font-size: 70px;
-                margin-bottom: 100px;
-    
+                text-align: center;
+
+
             }
-    
+
             .project_section {
-                display: flex;
-                justify-content: space-between;
+                display: block;
+                margin-top: 100px;
                 margin-bottom: 80px;
-    
+
                 nav {
+                    width: 100%;
                     p:nth-of-type(1) {
-                        font-size: 45px;
-                        margin: 0;
-                        font-family: 'Nunito Sans';
-                        font-weight: bold;
+                        font-size: 3.6vw;
                     }
-    
+
                     p:nth-of-type(2) {
-                        font-size: 20px;
-                        line-height: 40px;
-                        font-family: 'Nunito Sans';
-                        font-weight: 500;
-                        white-space: pre-wrap;
-    
+                        font-size: 1.8vw;
+
+                    }
+                    p:nth-of-type(3) {
+                        text-align: left;
+                        img{
+                            width: 5vw;
+                        }
                     }
                 }
-    
+
                 .project_img {
                     margin-right: 160px;
-    
-    
-    
+
+
+
                     img {
-                        width: 639px;
+                        width: 100%;
                     }
-    
+
                 }
             }
         }
-    
+
         .Contact_all {
-            height: 950px;
+            width: 80%;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
     
             .Contact {
-                width: 45%;
+    
+                width: 80%;
                 margin-top: 70px;
                 font-family: 'Noto Sans KR';
-    
-    
     
                 #contact_text {
                     margin: 0;
@@ -735,29 +726,29 @@ main {
                 }
     
                 .contacts {
+                    
                     margin-top: 60px;
-                    display: flex;
-                    justify-content: space-between;
+                    display: block;
+                    justify-content: space-around;
     
                     .dlstkakf {
-                        font-size: 30px;
-                        line-height: 40px;
-                        font-weight: 400;
-    
-    
+                        width: 100%;
+                        font-size: 3vw;
+                        line-height: 50px;
+                        margin-bottom: 80px;
+
                         p {
                             margin: 0;
-                            white-space: pre-wrap;
+                            
                         }
                     }
     
                     .my_link {
+                        width: 100%;
                         text-align: left;
     
                         nav {
                             line-height: 50px;
-                            font-size: 20px;
-                            font-family: 'Noto Sans KR';
                             font-weight: bold;
     
                             p {
@@ -765,13 +756,12 @@ main {
                             }
     
                             p:nth-of-type(2n-1) {
-                                color: rgb(181, 180, 180);
+                                
                                 font-size: 20px;
                             }
     
                             p:nth-of-type(2n) {
-                                font-family: 'Noto Sans KR';
-                                font-weight: bold;
+                                
                                 font-size: 16px;
                             }
     
@@ -784,17 +774,955 @@ main {
     
                     }
     
+                    .contact_img {
+                        display: none;
+                        width: 32%;
+                        img {
+                            width: 500px;
+                           
+                        }
+            
+                    }
     
                 }
             }
     
-            .contact_img {
-                img {
-                    margin-right: 180px;
-                    margin-top: 115px;
-                }
-    
-            }
         }
     }
+}
+
+@include pad {
+    .header_line2 {
+        top: 0;
+        margin: 0;
+        width: 100%;
+        height: 50px;
+        border-right: 1px solid black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+
+        nav {
+            background-color: rgb(223, 223, 223);
+            padding-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: end;
+            border-bottom: 1px solid black;
+
+            a {
+                font-family: 'Nunito Sans';
+                font-size: 20px;
+                writing-mode: horizontal-tb;
+                transform: rotate(0);
+                margin-top: 40px;
+                text-decoration: none;
+                color: black;
+                margin: 0 20px;
+
+                &.link {
+                    text-decoration: underline;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+            }
+
+        }
+
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+
+        .home_contents {
+            width: 80%;
+            display: block;
+            height: 100%;
+            margin: 50px auto;
+
+            .home_text {
+                width: 100%;
+                margin: 0 auto;
+
+                .logo {
+                    display: none;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 15vw;
+
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 30px;
+                    font-size: 5vw;
+
+
+                }
+
+                button {
+                    font-size: 2.2vw;
+                    margin-top: 80px;
+                    width: 40vw;
+                }
+
+
+                .contact_link {
+                    margin-top: 150px;
+                    font-size: 16px;
+
+                }
+            }
+
+            .home_picture {
+                .drag_point {
+                    display: none;
+
+                }
+
+                .swiper_div {
+                    display: none;
+                }
+
+            }
+
+        }
+
+        #gohome {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 50px;
+            height: 30px;
+            top: 30px;
+            left: 30px;
+
+            a {
+                margin: 0;
+                text-align: center;
+                font-family: 'Libre Barcode 128 Text';
+                font-size: 40px;
+                color: black;
+
+            }
+        }
+
+        .about_skill {
+            font-family: 'Nunito Sans';
+            font-weight: bold;
+            margin-top: 70px;
+            display: block;
+
+            .me {
+                width: 80%;
+                margin: 0 auto;
+
+                p:nth-of-type(1) {
+                    font-size: 7vw;
+                    margin-top: 150px;
+
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 3vw;
+                    margin: 0;
+                    margin-top: 60px;
+
+                    b {
+                        font-size: 2vw;
+                    }
+                }
+
+                #my_face {
+                    margin-top: 30px;
+                    width: 80%;
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 50px;
+                    font-size: 3vw;
+
+                    #red_text {
+                        color: rgb(255, 0, 0);
+                    }
+                }
+
+                .resume_down {
+
+                    width: 25vw;
+                    font-size: 2.2vw;
+                    font-weight: bold;
+                    border: 0;
+                }
+
+                .resume_down:hover {
+                    cursor: pointer;
+
+                }
+
+            }
+
+            .my_skill {
+                width: 80%;
+                margin-right: 8vw;
+                margin: 100px auto;
+
+                p:nth-of-type(1) {
+                    font-size: 7vw;
+                    margin: 0;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 4vw;
+                    margin-top: 60px;
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 60px;
+                    font-size: 4vw;
+                }
+
+                p:nth-of-type(4) {
+                    margin-top: 60px;
+                    font-size: 4vw;
+                }
+
+                .skill_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                }
+
+                .familar_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 40px;
+
+                    div {
+                        position: relative;
+                    }
+
+                    .family {
+                        width: 130px;
+                        height: 44px;
+                        border-radius: 30px;
+                        background-color: white;
+                        border: 3px solid black;
+                        font-family: 'Noto Sans KR';
+                        color: black;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    .family:hover {
+                        background-color: black;
+                        border: 3px solid black;
+                        color: white;
+                        cursor: pointer;
+                    }
+
+                    .skill_textbox {
+                        display: none;
+                        pointer-events: none;
+
+
+                        #skill_text {
+                            font-size: 15px;
+                            padding-top: 20%;
+                            width: 80%;
+                            font-size: 20px;
+                        }
+
+                        &.active {
+                            width: 330px;
+                            height: 330px;
+                            background-image: url('../public/imgs/Skills_img.png');
+                            background-repeat: no-repeat;
+                            display: flex;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            text-align: center;
+                            justify-content: center;
+
+                        }
+                    }
+
+                }
+
+                .normar_list {
+                    display: flex;
+                    margin-bottom: 30px;
+                    flex-wrap: wrap;
+                    gap: 40px;
+
+                    div {
+                        position: relative;
+                    }
+
+                    .normar {
+                        width: 130px;
+                        height: 44px;
+                        border-radius: 30px;
+                        background-color: black;
+                        color: white;
+                        font-size: 16px;
+                        font-family: 'Noto Sans KR';
+                        font-weight: bold;
+                        border: 0;
+                    }
+
+                    .normar:hover {
+                        background-color: white;
+                        border: 3px solid black;
+                        color: black;
+                        cursor: pointer;
+                    }
+
+                    .skill_textbox2 {
+                        display: none;
+                        pointer-events: none;
+
+
+                        #skill_text2 {
+                            font-size: 15px;
+                            padding-top: 20%;
+                            width: 80%;
+                            font-size: 20px;
+                        }
+
+                        &.active {
+                            width: 330px;
+                            height: 330px;
+                            background-image: url('../public/imgs/Skills_img.png');
+                            background-repeat: no-repeat;
+                            display: flex;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            text-align: center;
+                            justify-content: center;
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .Project {
+            width: 80%;
+            margin: 150px auto;
+
+            #project_text {
+                margin-top: 60px;
+                font-size: 7vw;
+                
+
+
+            }
+
+            .project_section {
+                display: block;
+                margin-top: 100px;
+                margin-bottom: 80px;
+
+                nav {
+                    width: 100%;
+                    p:nth-of-type(1) {
+                        font-size: 5vw;
+                    }
+
+                    p:nth-of-type(2) {
+                        font-size: 2.2vw;
+                        line-height: 5vw;
+
+                    }
+                    p:nth-of-type(3) {
+                        text-align: left;
+                        img{
+                            width: 5vw;
+                        }
+                    }
+                }
+
+                .project_img {
+                    margin-right: 160px;
+
+
+
+                    img {
+                        width: 60vw;
+                    }
+
+                }
+            }
+        }
+
+        .Contact_all {
+            width: 80%;
+            margin: 150px auto;
+            display: flex;
+            justify-content: space-between;
+    
+            .Contact {
+                margin: 0;
+                width: 80%;
+                font-family: 'Noto Sans KR';
+    
+                #contact_text {
+                    
+                    font-size: 7vw;
+    
+                }
+    
+                .contacts {
+                    
+                    display: block;
+                    justify-content: space-around;
+    
+                    .dlstkakf {
+                        width: 100%;
+                        font-size: 4vw;
+                        line-height: 50px;
+                        margin-bottom: 80px;
+
+                        p {
+                            margin: 0;
+                            
+                        }
+                    }
+    
+                    .my_link {
+                        width: 100%;
+                        text-align: left;
+    
+                        nav {
+                            line-height: 40px;
+                            font-weight: bold;
+    
+                            p {
+                                margin: 0;
+                            }
+    
+                            p:nth-of-type(2n-1) {
+                                
+                                font-size: 20px;
+                            }
+    
+                            p:nth-of-type(2n) {
+                                
+                                font-size: 16px;
+                            }
+    
+                            a {
+                                color: black;
+                                text-decoration: none;
+                            }
+    
+                        }
+    
+                    }
+    
+                    .contact_img {
+                        display: none;
+                        width: 32%;
+                        img {
+                            width: 500px;
+                           
+                        }
+            
+                    }
+    
+                }
+            }
+    
+        }
+
+    }
+}
+
+@include mobile {
+    .header_line2 {
+        top: 0;
+        margin: 0;
+        width: 100%;
+        height: 50px;
+        border-right: 1px solid black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+
+        nav {
+            background-color: rgb(223, 223, 223);
+            padding-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: space-around;
+            border-bottom: 1px solid black;
+
+            a {
+                font-family: 'Nunito Sans';
+                font-size: 20px;
+                writing-mode: horizontal-tb;
+                transform: rotate(0);
+                margin-top: 40px;
+                text-decoration: none;
+                color: black;
+                margin: 0px;
+
+                &.link {
+                    text-decoration: underline;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+            }
+
+        }
+
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+
+        .home_contents {
+            width: 80%;
+            display: block;
+            height: 100%;
+            margin: 50px auto;
+
+            .home_text {
+                width: 100%;
+                margin: 0 auto;
+
+                .logo {
+                    display: none;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 15vw;
+
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 30px;
+                    font-size: 6vw;
+
+
+                }
+
+                button {
+                    font-size: 3.2vw;
+                    margin-top: 80px;
+                    width: 40vw;
+                }
+
+
+                .contact_link {
+                    margin-top: 150px;
+                    font-size: 16px;
+                    margin-bottom: 0;
+
+                }
+            }
+
+            .home_picture {
+                .drag_point {
+                    display: none;
+
+                }
+
+                .swiper_div {
+                    display: none;
+                }
+
+            }
+
+        }
+
+        .header_line2 {
+            top: 0;
+            margin: 0;
+            width: 100%;
+            height: 50px;
+            border-right: 1px solid black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+
+            nav {
+                background-color: rgb(223, 223, 223);
+                padding-top: 30px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                justify-content: end;
+                border-bottom: 1px solid black;
+
+                a {
+                    font-family: 'Nunito Sans';
+                    font-size: 20px;
+                    writing-mode: horizontal-tb;
+                    transform: rotate(0);
+                    margin-top: 40px;
+                    text-decoration: none;
+                    color: black;
+                    margin: 0 20px;
+
+                    &.link {
+                        text-decoration: underline;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+
+                }
+
+            }
+
+        }
+
+        #gohome {
+            display: none;
+        }
+
+        .about_skill {
+            margin-top: 70px;
+            display: block;
+
+            .me {
+                width: 80%;
+                margin: 0 auto;
+
+                p:nth-of-type(1) {
+                    font-size: 10vw;
+                    margin-top: 150px;
+
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 5vw;
+                    margin: 0;
+                    margin-top: 60px;
+
+                    b {
+                        font-size: 4vw;
+                    }
+                }
+
+                #my_face {
+                    margin-top: 30px;
+                    width: 90%;
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 50px;
+                    font-size: 4vw;
+                    #red_text {
+                        color: rgb(255, 0, 0);
+                    }
+                }
+
+                .resume_down {
+                    margin-top: 50px;
+                    width: 50vw;
+                    font-size: 4.2vw;
+                }
+
+            }
+
+            .my_skill {
+                width: 80%;
+                margin-right: 8vw;
+                margin: 100px auto;
+
+                p:nth-of-type(1) {
+                    font-size: 10vw;
+                    margin: 0;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 7vw;
+                    margin-top: 60px;
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 60px;
+                    font-size: 30px;
+                }
+
+                p:nth-of-type(4) {
+                    margin-top: 60px;
+                    font-size: 30px;
+                }
+
+                .skill_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                }
+
+                .familar_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 40px;
+
+                    div {
+                        position: relative;
+                    }
+
+                    .family {
+                        width: 130px;
+                        height: 44px;
+                        border-radius: 30px;
+                        background-color: white;
+                        border: 3px solid black;
+                        font-family: 'Noto Sans KR';
+                        color: black;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    .family:hover {
+                        background-color: black;
+                        border: 3px solid black;
+                        color: white;
+                        cursor: pointer;
+                    }
+
+                    .skill_textbox {
+                        display: none;
+                        pointer-events: none;
+
+
+                        #skill_text {
+                            font-size: 15px;
+                            padding-top: 20%;
+                            width: 80%;
+                            font-size: 20px;
+                        }
+
+                        &.active {
+                            width: 330px;
+                            height: 330px;
+                            background-image: url('../public/imgs/Skills_img.png');
+                            background-repeat: no-repeat;
+                            display: flex;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            text-align: center;
+                            justify-content: center;
+
+                        }
+                    }
+
+                }
+
+                .normar_list {
+                    display: flex;
+                    margin-bottom: 30px;
+                    flex-wrap: wrap;
+                    gap: 40px;
+
+                    div {
+                        position: relative;
+                    }
+
+                    .normar {
+                        width: 130px;
+                        height: 44px;
+                        border-radius: 30px;
+                        background-color: black;
+                        color: white;
+                        font-size: 16px;
+                        font-family: 'Noto Sans KR';
+                        font-weight: bold;
+                        border: 0;
+                    }
+
+                    .normar:hover {
+                        background-color: white;
+                        border: 3px solid black;
+                        color: black;
+                        cursor: pointer;
+                    }
+
+                    .skill_textbox2 {
+                        display: none;
+                        pointer-events: none;
+
+
+                        #skill_text2 {
+                            font-size: 15px;
+                            padding-top: 20%;
+                            width: 80%;
+                            font-size: 20px;
+                        }
+
+                        &.active {
+                            width: 330px;
+                            height: 330px;
+                            background-image: url('../public/imgs/Skills_img.png');
+                            background-repeat: no-repeat;
+                            display: flex;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            text-align: center;
+                            justify-content: center;
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .Project {
+            width: 80%;
+            margin: 150px auto;
+
+            #project_text {
+                margin-top: 60px;
+                font-size: 10vw;
+                
+
+
+            }
+
+            .project_section {
+                display: block;
+                margin-top: 100px;
+                margin-bottom: 80px;
+
+                nav {
+                    width: 100%;
+                    p:nth-of-type(1) {
+                        font-size: 5.5vw;
+                    }
+
+                    p:nth-of-type(2) {
+                        font-size: 3.2vw;
+                        line-height: 5vw;
+
+                    }
+                    p:nth-of-type(3) {
+                        text-align: left;
+                        img{
+                            width: 7vw;
+                        }
+                    }
+                }
+
+                .project_img {
+                    margin-right: 160px;
+
+
+
+                    img {
+                        width: 60vw;
+                    }
+
+                }
+            }
+        }
+
+        .Contact_all {
+            width: 80%;
+            margin: 150px auto;
+            display: flex;
+            justify-content: space-between;
+    
+            .Contact {
+                margin: 0;
+                width: 80%;
+                font-family: 'Noto Sans KR';
+    
+                #contact_text {
+                    
+                    font-size: 10vw;
+    
+                }
+    
+                .contacts {
+                    
+                    display: block;
+                    justify-content: space-around;
+    
+                    .dlstkakf {
+                        width: 100%;
+                        font-size: 5vw;
+                        line-height: 50px;
+                        margin-bottom: 80px;
+
+                        p {
+                            margin: 0;
+                            
+                        }
+                    }
+    
+                    .my_link {
+                        width: 100%;
+                        text-align: left;
+    
+                        nav {
+                            line-height: 10vw;
+                            font-weight: bold;
+    
+                            p {
+                                margin: 0;
+                            }
+    
+                            p:nth-of-type(2n-1) {
+                                
+                                font-size: 5vw;
+                            }
+    
+                            p:nth-of-type(2n) {
+                                
+                                font-size: 3vw;
+                            }
+    
+                            a {
+                                color: black;
+                                text-decoration: none;
+                            }
+    
+                        }
+    
+                    }
+    
+                    .contact_img {
+                        display: none;
+                        width: 32%;
+                        img {
+                            width: 500px;
+                           
+                        }
+            
+                    }
+    
+                }
+            }
+    
+        }
+
+    }
+
 }

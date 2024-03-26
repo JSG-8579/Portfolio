@@ -3,22 +3,22 @@ import { Link, useLocation } from "react-router-dom";
 
 function Contacts(props) {
 
-    const completedTitle = "'For any enquiries, or just to \nsay hello, get in touch and \ncontact'";
+    const completedTitle = "'For any enquiries, or just to say hello, get in touch and contact'";
     const [landingTitle, setLandingTitle] = useState("");
     const [count, setCount] = useState(0);
 
-    useEffect(()=>{
-    const interval = setInterval(() => {
-        setLandingTitle(landingTitle + completedTitle[count]);
-        setCount(count+1)
-    }, 100)
-    if(count === completedTitle.length){
-        clearInterval(interval)
-    }
-    return ()=> clearInterval(interval)
-})
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setLandingTitle(landingTitle + completedTitle[count]);
+            setCount(count + 1)
+        }, 50)
+        if (count === completedTitle.length) {
+            clearInterval(interval)
+        }
+        return () => clearInterval(interval)
+    })
 
-        
+
 
     const location = useLocation()
     useEffect(() => {
@@ -51,12 +51,12 @@ function Contacts(props) {
                                 <p>서울특별시 중랑구 중화동</p>
                             </nav>
                         </div>
+                        <div className='contact_img'>
+                            <img src="./imgs/Contact_img1.png" alt="" />
+                        </div>
 
 
                     </div>
-                </div>
-                <div className='contact_img'>
-                    <img src="./imgs/Contact_img1.png" alt="" />
                 </div>
             </div>
 

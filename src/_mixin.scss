@@ -1,6 +1,6 @@
 $mobile: 480px;
 $pad: 768px;
-$asd: 1250px;
+$first: 1250px;
 
 @mixin mobile {
     @media(max-width:$mobile) {
@@ -14,8 +14,8 @@ $asd: 1250px;
     }
 }
 
-@mixin asd {
-    @media(min-width:$pad) and (max-width:$asd) {
+@mixin first {
+    @media(min-width:$pad) and (max-width:$first) {
         @content;
     }
 }

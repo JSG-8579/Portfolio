@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/virtual';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Mousewheel } from 'swiper/modules';
-import { motion } from 'framer-motion';
+import { Pagination, Mousewheel, Autoplay  } from 'swiper/modules';
+import { delay, motion } from 'framer-motion';
 
 
 function Home(props) {
@@ -15,6 +15,9 @@ function Home(props) {
     }, [])
     return (
         <div className='home_contents'>
+            <div id='gohome'>
+                <Link to='/'>JSG</Link>
+            </div>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -31,48 +34,21 @@ function Home(props) {
                 <p>FrontEnd developer is My Dream</p>
                 <Link to='/PROJECT'><button>ABOUT & SKILL</button></Link>
 
-                <div className='swiper_div2'>
-                    <div className='swiper2'>
-                        <Swiper
-                            spaceBetween={10}
-                            slidesPerView={3}
-                            centeredSlides={true}
-                            loop={true}
-                            initialSlide={1}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Pagination]}
-                            navigation
-                            scrollbar={{ draggable: true }}>
-                            {
-                                imgs.map((obj,k) => (
-                                    <SwiperSlide key={k}><Link  to='/PROJECT'><img src={`./imgs/${obj}.PNG`} /></Link></SwiperSlide>
-                                ))
-                            }
-
-
-                        </Swiper>
-                    </div>
-                </div>
-
-
-
                 <div className='contact_link'>
                     <Link to='/CONTACT'><p>CONTACT</p></Link>
                     <img src='./imgs/Home_img4.png' alt="" width='40' height='27' />
                 </div>
             </motion.div>
-            <motion.div 
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{
-                ease: "easeInOut",
-                duration: 2,
-                y: { duration: 1 },
-            }}
-            className='home_picture'>
+            <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 2,
+                    y: { duration: 1 },
+                }}
+                className='home_picture'>
                 <img className='drag_point' src='./imgs/Home_img5.png' alt="" />
                 <div className='swiper_div'>
                     <div className='swiper'>
@@ -80,19 +56,26 @@ function Home(props) {
                             spaceBetween={30}
                             slidesPerView={2}
                             centeredSlides={true}
+                            modules={[Pagination, Mousewheel,Autoplay]}
+                            autoplay={{
+                                delay: 1500,
+                                disableOnInteraction: false
+                                //스와이프후 자동재생 false
+                            }
+                            }
                             loop={true}
                             direction={'vertical'}
                             initialSlide={1}
                             pagination={{
-                                clickable: true,
+                                clickable: true
                             }}
-                            modules={[Pagination, Mousewheel]}
+
                             navigation
                             scrollbar={{ draggable: true }}
                             mousewheel={{ invert: false }}>
                             {
-                                imgs.map((obj,k) => (
-                                    <SwiperSlide key={k}><Link  to='/PROJECT'><img src={`./imgs/${obj}.png`} /></Link></SwiperSlide>
+                                imgs.map((obj, k) => (
+                                    <SwiperSlide key={k}><Link to='/PROJECT'><img src={`./imgs/${obj}.png`} /></Link></SwiperSlide>
                                 ))
                             }
 

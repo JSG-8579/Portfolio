@@ -26,7 +26,7 @@ function About(props) {
         [
             { 'name': 'JQeury', 'text': 'JQeury' },
             { 'name': 'Mongo', 'text': 'Mongo' }
-            
+
         ]
 
     // const downloadResume =()=>{
@@ -37,7 +37,7 @@ function About(props) {
     // }    
     const [a, setA] = useState()
     const [b, setB] = useState()
-    
+
 
     const familarBalloonUp = (idx) => {
         if (a == null) {
@@ -71,7 +71,17 @@ function About(props) {
                 <Link to='/'>JSG</Link>
             </div>
             <div className='about_skill'>
-                <div className='me'>
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1,
+                        y: { duration: 1 },
+                    }}
+
+                    className='me'>
                     <p>ABOUT</p>
                     <p>정승관 <b>1995.07</b></p>
                     <img id='my_face' src='./imgs/about.png' alt="" />
@@ -84,17 +94,27 @@ function About(props) {
                         <br />
                         이 모두를 계속 발전하기위해 나아가는<br />
                         제 이름은 정승관입니다.</p>
-                    <Download/>
-                </div>
+                    <Download />
+                </motion.div>
                 {/* <div id='line2'></div> */}
-                <div className='my_skill'>
+                <motion.div
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1,
+                        y: { duration: 1 }
+                    }}
+
+                    className='my_skill'>
                     <p>SKILL</p>
                     <p>That I Own</p>
                     <div
-                    
-                     className='skill_list'>
+
+                        className='skill_list'>
                         {
-                            SkillName.map((obj,k) => (
+                            SkillName.map((obj, k) => (
                                 <img key={k} src={`./imgs/${obj}.png`} />
                             ))
 
@@ -104,17 +124,17 @@ function About(props) {
                     <div className='familar_list'>
                         {
                             // FamilarName.map((obj, idx) => (
-                                <Familar FamilarName={FamilarName} familarBalloonUp={familarBalloonUp} a={a} setB={setB} />
+                            <Familar FamilarName={FamilarName} familarBalloonUp={familarBalloonUp} a={a} setB={setB} />
                             // ))
                         }
                     </div>
                     <p>Normal</p>
                     <div className='normar_list'>
-                                <Normar NormarName={NormarName} normarBalloonUp={normarBalloonUp} b={b} setA={setA} />       
+                        <Normar NormarName={NormarName} normarBalloonUp={normarBalloonUp} b={b} setA={setA} />
                     </div>
 
 
-                </div>
+                </motion.div>
             </div>
         </div>
     );
