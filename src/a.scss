@@ -589,7 +589,7 @@ main {
                 }
 
                 .swiper_div2 {
-                    padding-top: 50px;
+                    padding-top: 150px;
                     display: block;
                     .swiper2 {
                         width: 100vh;
@@ -664,10 +664,137 @@ main {
                     width: 80%;
                     justify-content: center;
                     margin: 0 auto;
+                    padding-bottom: 50px;
                 }
 
             }
 
+        }
+        .Project {
+            margin-top: 70px;
+    
+            #project_text {
+                margin: 0;
+                font-size: 70px;
+                margin-bottom: 100px;
+    
+            }
+    
+            .project_section {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 80px;
+    
+                nav {
+                    p:nth-of-type(1) {
+                        font-size: 45px;
+                        margin: 0;
+                        font-family: 'Nunito Sans';
+                        font-weight: bold;
+                    }
+    
+                    p:nth-of-type(2) {
+                        font-size: 20px;
+                        line-height: 40px;
+                        font-family: 'Nunito Sans';
+                        font-weight: 500;
+                        white-space: pre-wrap;
+    
+                    }
+                }
+    
+                .project_img {
+                    margin-right: 160px;
+    
+    
+    
+                    img {
+                        width: 639px;
+                    }
+    
+                }
+            }
+        }
+    
+        .Contact_all {
+            height: 950px;
+            display: flex;
+            justify-content: space-between;
+    
+            .Contact {
+                width: 45%;
+                margin-top: 70px;
+                font-family: 'Noto Sans KR';
+    
+    
+    
+                #contact_text {
+                    margin: 0;
+                    font-size: 70px;
+    
+                }
+    
+                .contacts {
+                    margin-top: 60px;
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .dlstkakf {
+                        font-size: 30px;
+                        line-height: 40px;
+                        font-weight: 400;
+    
+    
+                        p {
+                            margin: 0;
+                            white-space: pre-wrap;
+                        }
+                    }
+    
+                    .my_link {
+                        text-align: left;
+    
+                        nav {
+                            line-height: 50px;
+                            font-size: 20px;
+                            font-family: 'Noto Sans KR';
+                            font-weight: bold;
+    
+                            p {
+                                margin: 0;
+                            }
+    
+                            p:nth-of-type(2n-1) {
+                                color: rgb(181, 180, 180);
+                                font-size: 20px;
+                            }
+    
+                            p:nth-of-type(2n) {
+                                font-family: 'Noto Sans KR';
+                                font-weight: bold;
+                                font-size: 16px;
+                            }
+    
+                            a {
+                                color: black;
+                                text-decoration: none;
+                            }
+    
+                        }
+    
+                    }
+    
+    
+                }
+            }
+    
+            .contact_img {
+                img {
+                    margin-right: 180px;
+                    margin-top: 115px;
+                }
+    
+            }
         }
     }
 }
