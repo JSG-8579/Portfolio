@@ -30,6 +30,34 @@ function Home(props) {
                 <p>JSG STORY</p>
                 <p>FrontEnd developer is My Dream</p>
                 <Link to='/PROJECT'><button>ABOUT & SKILL</button></Link>
+
+                <div className='swiper_div2'>
+                    <div className='swiper2'>
+                        <Swiper
+                            spaceBetween={10}
+                            slidesPerView={3}
+                            centeredSlides={true}
+                            loop={true}
+                            initialSlide={1}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Pagination]}
+                            navigation
+                            scrollbar={{ draggable: true }}>
+                            {
+                                imgs.map((obj,k) => (
+                                    <SwiperSlide key={k}><Link  to='/PROJECT'><img src={`./imgs/${obj}.png`} /></Link></SwiperSlide>
+                                ))
+                            }
+
+
+                        </Swiper>
+                    </div>
+                </div>
+
+
+
                 <div className='contact_link'>
                     <Link to='/CONTACT'><p>CONTACT</p></Link>
                     <img src='./imgs/Home_img4.png' alt="" width='40' height='27' />
