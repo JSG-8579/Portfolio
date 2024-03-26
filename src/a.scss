@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import "./mixin";
 
 body {
     margin: 0;
@@ -56,7 +57,7 @@ body {
 }
 
 main {
-    margin-left: 259px;
+    margin-left: 250px;
 
 
     .home_contents {
@@ -124,19 +125,18 @@ main {
             }
         }
 
-        .home_picture {
-            display: flex;
-            margin-right: 96px;
+        .drag_point {
+            width: 23px;
+            height: 64px;
+            margin: auto 33px;
+        }
 
-            .drag_point {
-                width: 23px;
-                height: 64px;
-                margin: auto 33px;
-            }
+        .home_picture {
+            margin-right: 96px;
 
             .swiper_div {
                 .swiper {
-                    width: 414px;
+                    width: 25vw;
                     height: 100vh;
                     overflow: hidden;
 
@@ -179,6 +179,8 @@ main {
         justify-content: space-between;
 
         .me {
+            width: 40%;
+
             p:nth-of-type(1) {
                 font-size: 70px;
                 margin: 0;
@@ -197,6 +199,7 @@ main {
 
             #my_face {
                 margin-top: 30px;
+                width: 80%;
             }
 
             p:nth-of-type(3) {
@@ -225,12 +228,13 @@ main {
 
         }
 
-        #line2 {
-            border-right: 1px solid black;
-        }
+        // #line2 {
+        //     border-right: 1px solid black;
+        // }
 
         .my_skill {
-            margin-right: 150px;
+            width: 40%;
+            margin-right: 8vw;
 
             p:nth-of-type(1) {
                 font-size: 70px;
@@ -251,14 +255,14 @@ main {
             }
 
             .skill_list {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                display: flex;
+                flex-wrap: wrap;
                 gap: 40px;
             }
 
             .familar_list {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                display: flex;
+                flex-wrap: wrap;
                 gap: 40px;
 
                 div {
@@ -314,8 +318,8 @@ main {
             }
 
             .normar_list {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                display: flex;
+                flex-wrap: wrap;
                 gap: 40px;
 
                 div {
@@ -427,13 +431,13 @@ main {
             width: 45%;
             margin-top: 70px;
             font-family: 'Noto Sans KR';
-            font-weight: 600;
+
 
 
             #contact_text {
                 margin: 0;
                 font-size: 70px;
-                
+
             }
 
             .contacts {
@@ -445,7 +449,7 @@ main {
                     font-size: 30px;
                     line-height: 40px;
                     font-weight: 400;
-                    
+
 
                     p {
                         margin: 0;
@@ -500,4 +504,50 @@ main {
     }
 
 
+}
+
+@include asd {
+
+    main {
+        margin-left: 100px;
+        .about_skill {
+            display: block;
+
+            .me {
+                width: 100%;
+                text-align: center;
+                
+
+                #my_face {
+                    margin-top: 30px;
+                    width: 80%;
+                    
+                }
+            }
+
+            .my_skill {
+                width: 100%;
+                padding-top: 100px;
+                text-align: center;
+                .skill_list{
+                    width: 80%;
+                    justify-content: center;
+                    margin: 0 auto;
+                }
+
+                .familar_list{
+                    width: 80%;
+                    justify-content: center;
+                    margin: 0 auto;
+                }
+                .normar_list{
+                    width: 80%;
+                    justify-content: center;
+                    margin: 0 auto;
+                }
+
+            }
+
+        }
+    }
 }

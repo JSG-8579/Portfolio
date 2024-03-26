@@ -7,15 +7,15 @@ function Project(props) {
         [
             {
                 'project_name': 'Happy Pub',
-                'text': '첫번째 프로젝트인 주류 판매 사이트입니다.\n기존 술마켓 각각의 온라인 판매 사이트를 참고하여\n디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다',
+                'text': '첫번째 프로젝트인 Happy Pub 사이트입니다.\n기존 술마켓 각각의 온라인 판매 사이트를 참고하여\n디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다',
                 'img': './imgs/Project1.png',
                 'link': 'https://jsg-8579.github.io/Team-project-Pub/'
             },
             {
                 'project_name': 'Happy Pub',
-                'text': '첫번째 프로젝트인 주류 판매 사이트입니다.\n기존 술마켓 각각의 온라인 판매 사이트를 참고하여\n디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다',
+                'text': '두번째 프로젝트인 kookkook 사이트입니다.\n기존 레시피 공유 사이트인 "만개의 레시피" 웹페이지를 참고했고\n Next, mongodb, firebase, api를 사용하여 팀 프로젝트로 개발하였습니다. ',
                 'img': './imgs/Project1.png',
-                'link': 'https://jsg-8579.github.io/Team-project-Pub/'
+                'link': 'https://kook-project.vercel.app/'
             },
             {
                 'project_name': 'Happy Pub',
@@ -53,8 +53,8 @@ function Project(props) {
             }}className='Project'>
                 <p id='project_text'>PROJECT</p>
                 {
-                    Project_all.map((obj) => (
-                        <section className='project_section'>
+                    Project_all.map((obj, k) => (
+                        <section key={k} className='project_section'>
                             <motion.nav
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +65,7 @@ function Project(props) {
                                 y: { duration: 1 },
                             }}>
                                 <p>{obj.project_name}</p>
-                                <p>{obj.text}</p>
+                                <p >{obj.text}</p>
                             </motion.nav>
                             <motion.div
                             initial={{ opacity: 0, x: 100 }}

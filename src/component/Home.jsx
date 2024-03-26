@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 
 function Home(props) {
-    const imgs = ["img1", "img2", "img3", "img1", "img2", "img3"]
+    const imgs = ["Project1", "Project2", "Project3", "Project1", "Project2", "Project3"]
     const location = useLocation()
     useEffect(() => {
         props.getUrl(location.pathname)
@@ -49,7 +49,6 @@ function Home(props) {
                 <div className='swiper_div'>
                     <div className='swiper'>
                         <Swiper
-                            // 스와이프 세로좀 해라
                             spaceBetween={30}
                             slidesPerView={2}
                             centeredSlides={true}
@@ -64,8 +63,8 @@ function Home(props) {
                             scrollbar={{ draggable: true }}
                             mousewheel={{ invert: false }}>
                             {
-                                imgs.map((obj) => (
-                                    <SwiperSlide ><Link key={obj} to='/PROJECT'><img src={`./imgs/Home_${obj}.png`} /></Link></SwiperSlide>
+                                imgs.map((obj,k) => (
+                                    <SwiperSlide key={k}><Link  to='/PROJECT'><img src={`./imgs/${obj}.png`} /></Link></SwiperSlide>
                                 ))
                             }
 

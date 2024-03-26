@@ -86,7 +86,7 @@ function About(props) {
                         제 이름은 정승관입니다.</p>
                     <Download/>
                 </div>
-                <div id='line2'></div>
+                {/* <div id='line2'></div> */}
                 <div className='my_skill'>
                     <p>SKILL</p>
                     <p>That I Own</p>
@@ -94,8 +94,8 @@ function About(props) {
                     
                      className='skill_list'>
                         {
-                            SkillName.map((obj) => (
-                                <img key={obj} src={`./imgs/${obj}.png`} />
+                            SkillName.map((obj,k) => (
+                                <img key={k} src={`./imgs/${obj}.png`} />
                             ))
 
                         }
@@ -103,18 +103,14 @@ function About(props) {
                     <p>Familar</p>
                     <div className='familar_list'>
                         {
-                            FamilarName.map((obj, idx) => (
-                                <Familar obj={obj} idx={idx} familarBalloonUp={familarBalloonUp} a={a} setB={setB} />
-                            ))
+                            // FamilarName.map((obj, idx) => (
+                                <Familar FamilarName={FamilarName} familarBalloonUp={familarBalloonUp} a={a} setB={setB} />
+                            // ))
                         }
                     </div>
                     <p>Normal</p>
                     <div className='normar_list'>
-                        {
-                            NormarName.map((obj, idx) => (
-                                <Normar obj={obj} idx={idx} normarBalloonUp={normarBalloonUp} b={b} setA={setA} />
-                            ))
-                        }
+                                <Normar NormarName={NormarName} normarBalloonUp={normarBalloonUp} b={b} setA={setA} />       
                     </div>
 
 
