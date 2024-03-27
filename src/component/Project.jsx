@@ -74,7 +74,9 @@ function Project(props) {
                             }}>
                                 <p>{k+1}. {obj.project_name}</p>
                                 <p >{obj.text}</p>
-                                <p><img onClick={() => { projectLink(obj.git_link) }} src={obj.git_img} alt="" /></p>
+                                <div className='readme'>
+                                <button onClick={() => { projectLink(obj.git_link) }}>자세히보기▶README</button>
+                                </div>
                             </motion.nav>
                             <motion.div
                             initial={{ opacity: 0, x: 100 }}
@@ -85,6 +87,7 @@ function Project(props) {
                                 duration: 1,
                                 y: { duration: 1 }
                             }} className='project_img'>
+                                <p>{obj.project_name} 사이트</p>
                                 <img onClick={() => { projectLink(obj.link) }} src={obj.img} alt="" />
 
                             </motion.div>
