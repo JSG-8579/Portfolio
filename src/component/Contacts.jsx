@@ -29,6 +29,7 @@ function Contacts(props) {
             <div id='gohome'>
                 <Link to='/'>JSG</Link>
             </div>
+
             <div className='Contact_all'>
                 <div className='Contact'>
                     <p id='contact_text'>CONTACT</p>

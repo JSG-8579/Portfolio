@@ -28,7 +28,7 @@ function Project(props) {
                 'img': './imgs/Project1.png',
                 'git_img': './imgs/git_icon.png',
                 'git_link': 'https://github.com/JSG-8579/Team-project-Happy-Pub',
-                'link': 'https://jsg-8579.github.io/Team-project-Pub/'
+                'link': 'https://team-project-happy-pub.vercel.app/'
             }
         ]
 
@@ -47,8 +47,9 @@ function Project(props) {
     return (
         <div>
             <div id='gohome'>
-                <Link to='/'>JSG</Link>
-            </div>
+          <Link to='/'>JSG</Link>
+          </div>
+
             <motion.div 
             // initial={{ opacity: 0, y: -100 }}
             // whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +72,8 @@ function Project(props) {
                                 ease: "easeInOut",
                                 duration: 1,
                                 y: { duration: 1 },
-                            }}>
+                            }}
+                            >
                                 <p>{k+1}. {obj.project_name}</p>
                                 <p >{obj.text}</p>
                                 <div className='readme'>
@@ -86,9 +88,10 @@ function Project(props) {
                                 ease: "easeInOut",
                                 duration: 1,
                                 y: { duration: 1 }
-                            }} className='project_img'>
-                                <p>{obj.project_name} 사이트</p>
-                                <img onClick={() => { projectLink(obj.link) }} src={obj.img} alt="" />
+                            }} 
+                            className='project_img'>
+                                <p onClick={() => { projectLink(obj.link) }}>{obj.project_name} 사이트</p>
+                                <img src={obj.img} alt="" />
 
                             </motion.div>
 

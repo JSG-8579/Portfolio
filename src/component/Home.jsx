@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/virtual';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Mousewheel, Autoplay  } from 'swiper/modules';
+import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
 import { delay, motion } from 'framer-motion';
 
 
@@ -13,11 +13,10 @@ function Home(props) {
     useEffect(() => {
         props.getUrl(location.pathname)
     }, [])
+
+
     return (
         <div className='home_contents'>
-            <div id='gohome'>
-                <Link to='/'>JSG</Link>
-            </div>
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -56,12 +55,14 @@ function Home(props) {
                             spaceBetween={30}
                             slidesPerView={2}
                             centeredSlides={true}
-                            modules={[Pagination, Mousewheel,Autoplay]}
+                            modules={[Pagination, Mousewheel, Autoplay]}
+                            speed={3000}
                             autoplay={{
-                                delay: 1500,
-                                disableOnInteraction: false
+                                delay: 0,
+                                disableOnInteraction: false,
                                 //스와이프후 자동재생 false
                             }
+
                             }
                             loop={true}
                             direction={'vertical'}

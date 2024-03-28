@@ -11,7 +11,7 @@ function Normar({ NormarName, b, normarBalloonUp, setA }) {
                         {obj.text}
                     </p>
                 </div>
-                <button onClick={() => { normarBalloonUp(idx); setA(null) }} key={obj} className='normar'>{obj.name}</button>
+                <button onClick={(e) => { normarBalloonUp(e, idx); setA(null) }} key={obj} className={`normar ${b == idx ? 'active' : ''}`}>{obj.name}</button>
             </div>
             ))
         }
