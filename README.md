@@ -1,11 +1,11 @@
 
 <h1>🍻Happy Pub Project </h1>
-<img src='https://github.com/JSG-8579/Team-project-Happy-Pub/assets/54690444/80e04a5a-53be-4762-984a-c8f21279fa1f' width='700' height='400'>
+<img src='https://github.com/JSG-8579/Portfolio/assets/54690444/083db4e4-6d9c-4eda-9360-0c67b1b6e0ff' width='700' height='300'>
 <ul>
   <li>프로젝트 소개: React를 활용하여 제 자신의 포트폴리오를 만들었습니다.</li>
   <li>프로젝트 인원: 본인</li>
   <li>프로젝트 기간: 2024-02-01 ~ 2024-03-30</li>
-  <li>배포 URL(Vercel): [https://team-project-happy-pub.vercel.app](https://jsg8579.vercel.app/)/</li>
+  <li>배포 URL: https://jsg8579.vercel.app/</li>
 </ul>
 <h1>SKILL</h1>
 <div>
