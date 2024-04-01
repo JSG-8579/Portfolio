@@ -59,7 +59,7 @@ function Home(props) {
                             speed={3000}
                             autoplay={{
                                 delay: 0,
-                                disableOnInteraction: false,
+                                disableOnInteraction: true,
                                 //스와이프후 자동재생 false
                             }
 
@@ -73,7 +73,7 @@ function Home(props) {
 
                             navigation
                             scrollbar={{ draggable: true }}
-                            mousewheel={{ invert: false }}>
+                            mousewheel={true }>
                             {
                                 imgs.map((obj, k) => (
                                     <SwiperSlide key={k}><Link to='/PROJECT'><img src={`./imgs/${obj}.PNG`} /></Link></SwiperSlide>
