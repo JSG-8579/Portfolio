@@ -9,8 +9,7 @@ import { motion } from 'framer-motion';
 
 
 function About(props) {
-    const SkillName = ['HTML', 'SCSS', 'JS', 'TS', 'React', 'Next',
-        , 'Figma', 'Github', 'Firebase', 'Mongo', 'Next']
+    const SkillName = ['HTML', 'SCSS', 'JS', 'TS', 'React', 'Next', 'Figma', 'Github', 'Firebase', 'Mongo', 'Vercel']
     const FamilarName =
         [
             { 'name': 'HTML', 'text': '기본적인 웹표준을 잘 지키며 다양한 태그를 활용하여, 코드의 마크업이 가능합니다.' },

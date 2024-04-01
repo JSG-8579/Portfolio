@@ -76,7 +76,7 @@ function Home(props) {
                             mousewheel={{ invert: false }}>
                             {
                                 imgs.map((obj, k) => (
-                                    <SwiperSlide key={k}><Link to='/PROJECT'><img src={`./imgs/${obj}.png`} /></Link></SwiperSlide>
+                                    <SwiperSlide key={k}><Link to='/PROJECT'><img src={`./imgs/${obj}.PNG`} /></Link></SwiperSlide>
                                 ))
                             }
 
