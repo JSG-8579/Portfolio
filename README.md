@@ -1,6 +1,6 @@
 
-<h1>🍻Happy Pub Project </h1>
-<img src='https://github.com/JSG-8579/Portfolio/assets/54690444/083db4e4-6d9c-4eda-9360-0c67b1b6e0ff' width='700' height='300'>
+<h1>JSG Stroy</h1>
+<img src='https://github.com/JSG-8579/Portfolio/assets/54690444/ca29b3c3-6f39-447f-aec4-1a4325431aee' width='700' height='300'>
 <ul>
   <li>프로젝트 소개: React를 활용하여 제 자신의 포트폴리오를 만들었습니다.</li>
   <li>프로젝트 인원: 본인</li>
@@ -18,23 +18,21 @@
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white">
   
 </div>
-<h1>page 구성</h1>
+<h1>Page 구성</h1>
 <ul>
-  <li>home.html</li>
-  <li>list.html</li>
-  <li>view.html</li>
-  <li>payment.html</li>
-  <li>cart.html</li>
+  <li>App.js</li>
+  <li>Home.jsx</li>
+  <li>About.jsx</li>
+  <li>Project.jsx</li>
+  <li>Contact.jsx</li>
 </ul>
-<h1>당담 page</h1>
-<p>제품의 상세페이지인 view와 장바구니 기능인 cart 부분을 맡았습니다.</p>
+<h1>Page 설명</h1>
 <ul>
-  <li>url을 통해 선택한 제품의 params값을 받아서 상세페이지를 만들었습니다.</li>
-  <li>상세페이지의 pc, pad, moblie의 반응형 작업을 하였습니다.</li>
-  <li>로컬스토리지를 이용한 장바구니 기능을 구현하였습니다.</li>
-  <li>url과 로컬스토리지로 결제 페이지에 데이터를 보냈습니다.</li>
+  <li>App.js로 공통되는 header를 만들고, 각각의 페이지를 컴포넌트화 작업을 하여 url로 페이지가 전환되도록 하였습니다. </li>
+  <li>swiper를 사용하여 슬라이드 기능을 구현했습니다.</li>
+  <li>map구문으로 관련된 데이터들을 list화 시키고, Link를 사용하여 페이지 이동 및 관련 사이트 연결 작업을 했습니다. </li>
+  <li>반응형 작업을 PC로 시작하여 Pad, Moblie까지 진행하였습니다.</li>
 </ul>
 <h1>작업 후기</h1>
-<p>첫 팀 프로젝트을 진행하면서, Figma의 디자인 작업, Gitbub로 팀원들과 공유작업 등 처음 겪어보는게 많았고,</br>
-기능 구현을 하면서도 데이터 전송 관련 작업이 저에게는 난이도가 많이 높았습니다.</br> 그래도 하나하나씩 해결해 가면서 엄청 보람을 느꼈고,
-저에게 많이 약했던 css 기술 향상에 도움이 많이 되었습니다. </p>
+<p>자신을 소개하는 포트폴리오를 만드는데에 많이 낯설었고, React로 나만의 사이트를 만드는것에 대해 어려움이 있었지만,</br>
+팀 프로젝트를 진행하면서 기초가 많이 다져졌고,  </p>
