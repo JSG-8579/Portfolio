@@ -2,17 +2,17 @@
 <h1>🍻Happy Pub Project </h1>
 <img src='https://github.com/JSG-8579/Team-project-Happy-Pub/assets/54690444/80e04a5a-53be-4762-984a-c8f21279fa1f' width='700' height='400'>
 <ul>
-  <li>프로젝트 소개: 기존의 술마켓 사이트를 참고하여 새로운 디자인과 반응형 작업을 하기위해</br> 클론사이트로 만들었던 첫번째 프로젝트 입니다.</li>
-  <li>프로젝트 인원: 본인 외 4명</li>
-  <li>프로젝트 기간: 2023-12-15 ~ 2024-01-03</li>
-  <li>배포 URL(Git): https://team-project-happy-pub.vercel.app/</li>
-  <li>배포 URL(Vercel): https://team-project-happy-pub.vercel.app/</li>
+  <li>프로젝트 소개: React를 활용하여 제 자신의 포트폴리오를 만들었습니다.</li>
+  <li>프로젝트 인원: 본인</li>
+  <li>프로젝트 기간: 2024-02-01 ~ 2024-03-30</li>
+  <li>배포 URL(Vercel): [https://team-project-happy-pub.vercel.app](https://jsg8579.vercel.app/)/</li>
 </ul>
 <h1>SKILL</h1>
 <div>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=Vercel&logoColor=white">
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white">
