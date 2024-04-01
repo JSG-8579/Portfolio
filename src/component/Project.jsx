@@ -10,7 +10,7 @@ function Project(props) {
                 'text': '첫번째 개인 프로젝트인 JSG Story 입니다. React를 활용하여 흑백 배경의 심플한 화면으로 포트폴리오를 만들었고, swiper와 motion으로 움직임을 주었습니다. ',
                 'img': './imgs/portfolio1.PNG',
                 'git_link': 'https://github.com/JSG-8579/portfolio',
-                'link': 'https://kook-project.vercel.app/'
+                'link': 'https://jsg8579.vercel.app/'
             },
             {
                 'project_name': 'Kook kook',

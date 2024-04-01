@@ -8,7 +8,7 @@ import { delay, motion } from 'framer-motion';
 
 
 function Home(props) {
-    const imgs = ["Project1", "Project2", "Project3", "Project1", "Project2", "Project3"]
+    const imgs = ["Project1_vertical", "Project2_vertical","Project3_vertical", "Project4_vertical", "Project1_vertical", "Project2_vertical", "Project3_vertical","Project4_vertical"]
     const location = useLocation()
     useEffect(() => {
         props.getUrl(location.pathname)
