@@ -15,7 +15,7 @@ function Project(props) {
             {
                 'project_name': 'Kook kook',
                 'text': '두번째 프로젝트인 kookkook 사이트입니다. 기존 레시피 공유 사이트인 "만개의 레시피" 웹페이지를 참고했고 Next, mongodb, firebase, api를 사용하여 팀 프로젝트로 개발하였습니다. ',
-                'img': './imgs/Project4.png',
+                'img': './imgs/Project4.PNG',
                 'git_link': 'https://github.com/JSG-8579/KookProject',
                 'link': 'https://kook-project.vercel.app/'
             },

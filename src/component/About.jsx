@@ -95,7 +95,7 @@ function About(props) {
                     className='me'>
                     <p>ABOUT</p>
                     <p>정승관 <b>1995.07</b></p>
-                    <img id='my_face' src='./imgs/about.png' alt="" />
+                    <img id='my_face' src='./imgs/Myprofile.jpg' alt="" />
                     <p>노력, 집중력, 끈기<br />
                         저를 표현 할 수있는 단어 3가지입니다.<br />
                         <br />
