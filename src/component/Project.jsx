@@ -6,6 +6,13 @@ function Project(props) {
     const Project_all =
         [
             {
+                'project_name': 'Sudoku',
+                'text': '두번째 개인 프로젝트인 Sudoku 입니다. Vue를 활용하여 가로,세로,3x3 블럭의 중복값이 없이 1~9까지 숫자를 나열하는 방식의 게임이고, 난이도 별로 게임을 플레이 하실수 있습니다. ',
+                'img': './imgs/Project5.PNG',
+                'git_link': 'https://github.com/JSG-8579/sudoku',
+                'link': 'https://sudoku-kohl-tau.vercel.app/'
+            },
+            {
                 'project_name': 'JSG Stroy',
                 'text': '첫번째 개인 프로젝트인 JSG Story 입니다. React를 활용하여 흑백 배경의 심플한 화면으로 포트폴리오를 만들었고, swiper와 motion으로 움직임을 주었습니다. ',
                 'img': './imgs/portfolio1.PNG',
